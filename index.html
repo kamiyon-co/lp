@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAMIYON.Co｜売れない理由が、言語化される。｜営業戦略コンサルタント 服部一志</title>
+<meta name="description" content="K-4 MODEL®で「成果＝戦略×マインド×型×スキル」を設計する、法人向け営業研修・管理職研修。営業戦略コンサルタント 服部一志（KAMIYON.Co代表）。">
+
+<!-- ============================================================
+     ▼ ここを書き換えるだけでOK ▼
+     お問い合わせ先・SNSリンクを変更したい場合は、
+     下記の「" "」の中だけを書き換えてください。
+     （HTMLの他の場所はさわらなくて大丈夫です）
+============================================================ -->
+<script>
+  window.KAMIYON_CONFIG = {
+    email:        "h.kazushi@kamiyon.co",          // メールアドレス
+    tel:          "090-1220-8075",                  // 電話番号（表示用）
+    tel_link:     "09012208075",                    // 電話番号（タップ発信用・ハイフン無し）
+    facebook_url: "https://www.facebook.com/kazushi.hattori", // FacebookページのURL
+    contact_url:  "mailto:h.kazushi@kamiyon.co?subject=研修・コンサルティングのお問い合わせ"
+    // ↑お問い合わせフォームを用意したらここをそのフォームのURLに変えてもOK
+  };
+</script>
+<!-- ============================================================
+     ▲ 編集エリアここまで ▲
+============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#13284A;
+    --navy-2:#1E3A66;
+    --navy-soft:#2B4274;
+    --orange:#E87B2E;
+    --orange-deep:#C8631A;
+    --orange-soft:#FBEEDF;
+    --ink:#15233A;
+    --gray:#5C6678;
+    --line:#E2E6EE;
+    --paper:#F5F7FB;
+    --white:#FFFFFF;
+    --maxw:1140px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans JP","Inter","Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","Yu Gothic","游ゴシック","Meiryo",sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.85;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    letter-spacing:.02em;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none;transition:opacity .2s}
+  a:hover{opacity:.75}
+  img{max-width:100%;display:block}
+
+  /* 改行ヘルパー：PC/スマホで改行を出し分け */
+  .sp-br{display:none}
+  .pc-br{display:inline}
+  .sp-only{display:none !important}
+  .pc-only{display:flex}
+  @media(max-width:880px){
+    .sp-br{display:inline}
+    .pc-br{display:none}
+    .sp-only{display:flex !important}
+    .pc-only{display:none !important}
+  }
+
+  /* ============ HEADER ============ */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:baseline;gap:2px;font-weight:800;font-size:1.25rem;color:var(--navy);letter-spacing:.05em}
+  .brand .dot{color:var(--orange);font-size:1.4rem;line-height:0}
+  .brand small{font-weight:500;color:var(--gray);font-size:.7rem;letter-spacing:.18em;margin-left:8px}
+  .menu{display:flex;align-items:center;gap:32px}
+  .menu a{font-weight:500;color:var(--ink);font-size:.92rem;letter-spacing:.06em}
+  .menu .cta{
+    background:var(--orange);color:#fff;font-weight:700;
+    padding:11px 22px;border-radius:4px;font-size:.92rem;
+    box-shadow:0 4px 14px rgba(232,123,46,.32);
+  }
+  .menu .cta:hover{opacity:1;background:var(--orange-deep)}
+  .hamburger{display:none;background:none;border:none;cursor:pointer;padding:10px}
+  .hamburger span{display:block;width:26px;height:2px;background:var(--navy);margin:6px 0;transition:.3s}
+  .hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    padding:96px 0 88px;
+    background:
+      linear-gradient(180deg,#fff 0%,#fff 60%,var(--paper) 100%);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;top:-160px;right:-160px;width:520px;height:520px;
+    background:radial-gradient(circle,rgba(232,123,46,.10),transparent 70%);
+    border-radius:50%;z-index:0;
+  }
+  .hero::after{
+    content:"";position:absolute;bottom:-180px;left:-140px;width:480px;height:480px;
+    background:radial-gradient(circle,rgba(19,40,74,.06),transparent 70%);
+    border-radius:50%;z-index:0;
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-block;
+    font-weight:700;font-size:.78rem;color:var(--orange);
+    letter-spacing:.22em;
+    border-left:3px solid var(--orange);padding-left:12px;
+    margin-bottom:28px;
+  }
+  .hero h1{
+    font-size:clamp(2.2rem,5.4vw,4.2rem);
+    line-height:1.32;font-weight:900;color:var(--navy);
+    letter-spacing:.02em;margin-bottom:30px;
+  }
+  .hero h1 .em{
+    color:var(--orange);
+    position:relative;
+  }
+  .hero h1 .em::after{
+    content:"";position:absolute;left:0;right:0;bottom:-4px;height:6px;
+    background:var(--orange-soft);z-index:-1;
+  }
+  .hero .lead{
+    font-size:clamp(1rem,1.5vw,1.18rem);color:var(--gray);
+    max-width:34em;margin-bottom:40px;line-height:1.95;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 32px;font-weight:700;font-size:.98rem;
+    border-radius:4px;border:none;cursor:pointer;
+    letter-spacing:.05em;transition:all .25s;
+  }
+  .btn-primary{
+    background:var(--orange);color:#fff;
+    box-shadow:0 8px 22px rgba(232,123,46,.32);
+  }
+  .btn-primary:hover{background:var(--orange-deep);transform:translateY(-2px);opacity:1;box-shadow:0 12px 28px rgba(232,123,46,.42)}
+  .btn-ghost{
+    background:transparent;color:var(--navy);
+    border:2px solid var(--navy);padding:14px 30px;
+  }
+  .btn-ghost:hover{background:var(--navy);color:#fff;transform:translateY(-2px);opacity:1}
+  .arrow{display:inline-block;transition:transform .2s}
+  .btn:hover .arrow{transform:translateX(4px)}
+
+  /* ============ SECTION BASE ============ */
+  section{padding:104px 0;position:relative}
+  section[id]{scroll-margin-top:80px}
+  .sec-paper{background:var(--paper)}
+  .sec-navy{background:var(--navy);color:#fff}
+  .sec-head{text-align:center;max-width:44em;margin:0 auto 64px}
+  .sec-label{
+    display:inline-block;font-weight:700;color:var(--orange);
+    font-size:.78rem;letter-spacing:.28em;margin-bottom:18px;
+  }
+  .sec-navy .sec-label{color:#FFB67A}
+  .sec-head h2{
+    font-size:clamp(1.7rem,3.3vw,2.4rem);
+    color:var(--navy);font-weight:900;line-height:1.55;margin-bottom:18px;
+    letter-spacing:.03em;
+  }
+  .sec-navy .sec-head h2{color:#fff}
+  .sec-head p{color:var(--gray);font-size:1rem;line-height:2}
+  .sec-navy .sec-head p{color:rgba(255,255,255,.78)}
+
+  /* ============ PAINS ============ */
+  .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pain{
+    background:#fff;border:1px solid var(--line);
+    padding:40px 32px;position:relative;
+    border-top:3px solid var(--orange);
+    transition:transform .25s,box-shadow .25s;
+  }
+  .pain:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(19,40,74,.10)}
+  .pain .num{
+    font-family:"Inter",sans-serif;font-weight:800;font-size:.85rem;
+    color:var(--orange);letter-spacing:.15em;margin-bottom:18px;
+  }
+  .pain h3{
+    color:var(--navy);font-size:1.18rem;font-weight:700;
+    line-height:1.65;margin-bottom:14px;
+  }
+  .pain p{color:var(--gray);font-size:.94rem;line-height:1.9}
+  .check{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:28px;height:28px;background:var(--orange);color:#fff;
+    border-radius:4px;font-weight:900;margin-bottom:18px;
+  }
+
+  /* ============ K-4 MODEL ============ */
+  .k4-wrap{max-width:980px;margin:0 auto}
+  .k4-formula{
+    display:flex;align-items:stretch;justify-content:center;
+    gap:14px;margin:0 auto 48px;flex-wrap:wrap;
+  }
+  .k4-box{
+    flex:1 1 120px;min-width:110px;
+    background:#fff;border:2px solid var(--line);
+    padding:28px 14px;text-align:center;
+    transition:all .25s;
+  }
+  .k4-box.result{
+    background:var(--orange);color:#fff;border-color:var(--orange);
+  }
+  .k4-box.result .label{color:rgba(255,255,255,.85)}
+  .k4-box:hover:not(.op){border-color:var(--orange);transform:translateY(-4px);box-shadow:0 12px 28px rgba(232,123,46,.18)}
+  .k4-box .label{
+    display:block;font-family:"Inter",sans-serif;font-weight:600;
+    font-size:.7rem;letter-spacing:.2em;color:var(--gray);margin-bottom:10px;
+  }
+  .k4-box .jp{
+    display:block;font-size:1.45rem;font-weight:900;
+    color:var(--navy);letter-spacing:.06em;
+  }
+  .k4-box.result .jp{color:#fff}
+  .k4-op{
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.8rem;font-weight:900;color:var(--navy);
+    min-width:20px;
+  }
+  /* スマホ用 K-4 コンパクト式（成果＝上に、4要素を2x2グリッドで） */
+  .k4-mobile{
+    max-width:300px;margin:0 auto 32px;
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .k4-mini{
+    background:#fff;border:2px solid var(--line);
+    padding:14px 10px;text-align:center;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:3px;min-height:74px;
+  }
+  .k4-mini.result{
+    background:var(--orange);border-color:var(--orange);
+    width:140px;margin-bottom:0;
+  }
+  .k4-mini.result .label{color:rgba(255,255,255,.85)}
+  .k4-mini.result .jp{color:#fff}
+  .k4-mini .label{
+    font-family:"Inter",sans-serif;font-weight:600;
+    font-size:.6rem;letter-spacing:.16em;color:var(--gray);
+  }
+  .k4-mini .jp{font-size:1.1rem;font-weight:900;color:var(--navy);letter-spacing:.04em;line-height:1.2}
+  .k4-eq{
+    font-size:1.5rem;font-weight:900;color:var(--navy);line-height:1;
+    margin:6px 0 10px;
+  }
+  .k4-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
+    width:100%;position:relative;
+  }
+  /* 中央の十字に × を配置 */
+  .k4-grid::before{
+    content:"×";position:absolute;left:50%;top:50%;
+    transform:translate(-50%,-50%);
+    font-size:1rem;font-weight:900;color:var(--orange);
+    background:var(--paper);padding:2px 8px;z-index:2;line-height:1;
+  }
+
+  .k4-msg{
+    text-align:center;max-width:38em;margin:0 auto;
+    padding:36px 32px;background:#fff;
+    border:1px dashed var(--orange);
+  }
+  .k4-msg p{
+    font-size:clamp(1.05rem,1.8vw,1.3rem);
+    color:var(--navy);font-weight:700;line-height:1.85;
+  }
+  .k4-msg p strong{color:var(--orange)}
+
+  /* ============ PROGRAMS ============ */
+  .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .prog{
+    background:#fff;border:1px solid var(--line);
+    display:flex;flex-direction:column;
+    transition:transform .25s,box-shadow .25s;
+  }
+  .prog:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(19,40,74,.12)}
+  .prog-head{
+    background:var(--navy);color:#fff;
+    padding:26px 30px;
+  }
+  .prog:nth-child(2) .prog-head{background:var(--navy-2)}
+  .prog:nth-child(3) .prog-head{background:var(--orange)}
+  .prog-head .tag{
+    display:inline-block;font-family:"Inter",sans-serif;font-weight:600;
+    font-size:.7rem;letter-spacing:.22em;
+    color:rgba(255,255,255,.78);margin-bottom:10px;
+  }
+  .prog-head h3{font-size:1.4rem;font-weight:900;letter-spacing:.04em}
+  .prog-head .sub{font-size:.88rem;color:rgba(255,255,255,.85);margin-top:6px;letter-spacing:.08em}
+  .prog-body{padding:30px;flex:1;display:flex;flex-direction:column}
+  .prog-body p.desc{color:var(--ink);font-size:.96rem;line-height:1.85;margin-bottom:20px}
+  .prog-body ul{list-style:none;margin-top:auto}
+  .prog-body li{
+    position:relative;padding-left:22px;
+    color:var(--gray);font-size:.92rem;line-height:1.9;
+  }
+  .prog-body li::before{
+    content:"";position:absolute;left:0;top:14px;
+    width:8px;height:2px;background:var(--orange);
+  }
+
+  /* ============ RECORDS ============ */
+  .rec-list{max-width:880px;margin:0 auto}
+  .rec-row{
+    display:grid;grid-template-columns:160px 1fr;
+    gap:28px;padding:26px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .rec-row:first-child{border-top:1px solid rgba(255,255,255,.12)}
+  .rec-label{
+    display:inline-block;font-family:"Inter",sans-serif;
+    font-weight:600;font-size:.74rem;letter-spacing:.18em;
+    color:var(--orange);padding-top:6px;
+  }
+  .rec-label .jp{display:block;color:#fff;font-family:"Noto Sans JP",sans-serif;font-weight:700;font-size:1rem;letter-spacing:.06em;margin-top:4px}
+  .rec-names{color:#fff;font-size:1rem;line-height:1.9;letter-spacing:.04em}
+  .rec-note{text-align:right;color:rgba(255,255,255,.55);font-size:.78rem;margin-top:18px;letter-spacing:.05em}
+
+  /* ============ VOICES ============ */
+  .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:920px;margin:0 auto}
+  .voice{
+    background:#fff;border:1px solid var(--line);
+    padding:46px 40px;position:relative;
+  }
+  .voice .qmark{
+    position:absolute;top:18px;left:24px;
+    font-family:"Inter",sans-serif;font-size:4rem;font-weight:800;
+    color:var(--orange-soft);line-height:1;
+  }
+  .voice p{
+    position:relative;
+    font-size:clamp(1.15rem,1.8vw,1.4rem);
+    color:var(--navy);font-weight:700;line-height:1.75;
+    margin-bottom:18px;
+  }
+  .voice .from{font-size:.82rem;color:var(--gray);letter-spacing:.12em}
+
+  /* ============ PROFILE ============ */
+  .prof{
+    background:#fff;border:1px solid var(--line);
+    padding:48px;max-width:900px;margin:0 auto;
+    display:grid;grid-template-columns:240px 1fr;gap:44px;align-items:start;
+  }
+  .prof-photo{
+    width:100%;aspect-ratio:3/4;background:var(--navy);
+    overflow:hidden;position:relative;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .prof-photo img{
+    position:absolute;inset:0;
+    width:100%;height:100%;object-fit:cover;display:block;z-index:2;
+  }
+  .prof-photo .fallback{
+    font-family:"Inter",sans-serif;
+    font-weight:800;font-size:3rem;letter-spacing:.04em;
+    color:#fff;z-index:1;
+  }
+  .prof-info .role{
+    font-family:"Inter",sans-serif;font-size:.78rem;font-weight:600;
+    color:var(--orange);letter-spacing:.22em;margin-bottom:12px;
+  }
+  .prof-info h3{
+    font-size:1.7rem;font-weight:900;color:var(--navy);
+    letter-spacing:.06em;margin-bottom:6px;
+  }
+  .prof-info .kana{color:var(--gray);font-size:.92rem;letter-spacing:.12em;margin-bottom:20px}
+  .prof-info .company{
+    color:var(--navy);font-weight:700;font-size:1rem;
+    padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line);
+  }
+  .prof-info p.bio{color:var(--ink);font-size:.96rem;line-height:2}
+  .career{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;
+  }
+  .career span{
+    font-size:.82rem;color:var(--navy);
+    background:var(--paper);padding:5px 12px;border-radius:3px;
+    letter-spacing:.05em;
+  }
+  .career .arr{color:var(--orange);font-weight:800;padding:5px 0;background:transparent}
+
+  /* ============ AI ERA ============ */
+  .ai-body{max-width:680px;margin:0 auto;text-align:center}
+  .ai-body p{
+    color:var(--ink);font-size:1.05rem;line-height:2.1;
+    margin-bottom:24px;letter-spacing:.04em;
+  }
+  .ai-body p:last-child{margin-bottom:0}
+  .ai-body strong{color:var(--orange);font-weight:900}
+
+  /* ============ CONTACT ============ */
+  .contact{background:var(--navy);color:#fff;padding:96px 0;position:relative;overflow:hidden}
+  .contact::before{
+    content:"";position:absolute;top:-100px;right:-100px;width:400px;height:400px;
+    background:radial-gradient(circle,rgba(232,123,46,.18),transparent 70%);
+    border-radius:50%;
+  }
+  .contact .wrap{position:relative;z-index:1}
+  .contact-head{text-align:center;margin-bottom:50px}
+  .contact-head .sec-label{color:#FFB67A}
+  .contact-head h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:900;line-height:1.5;letter-spacing:.04em;margin-bottom:18px}
+  .contact-head p{color:rgba(255,255,255,.78);font-size:1rem;line-height:2;max-width:34em;margin:0 auto}
+  .contact-list{
+    max-width:600px;margin:0 auto 40px;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .c-row{
+    display:grid;grid-template-columns:auto 100px 1fr auto;
+    align-items:center;gap:18px;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+    padding:18px 24px;transition:all .25s;
+  }
+  .c-row:hover{background:rgba(255,255,255,.10);border-color:var(--orange);opacity:1}
+  .c-row .ic{
+    width:38px;height:38px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--orange);color:#fff;font-size:1.05rem;font-weight:800;
+  }
+  .c-row .c-label{
+    font-family:"Inter",sans-serif;font-weight:600;
+    font-size:.72rem;letter-spacing:.2em;color:#FFB67A;
+  }
+  .c-row .val{font-size:.98rem;font-weight:700;color:#fff;letter-spacing:.04em;word-break:break-all}
+  .c-row .arrow{color:var(--orange);font-weight:800}
+  .contact-cta{text-align:center}
+
+  /* ============ FOOTER ============ */
+  footer{background:#0E1D38;color:rgba(255,255,255,.6);padding:44px 0;text-align:center;font-size:.82rem;letter-spacing:.08em}
+  footer .brand{justify-content:center;margin-bottom:14px;color:#fff}
+  footer .foot-tag{color:rgba(255,255,255,.7);font-size:.85rem;line-height:1.9;margin-bottom:18px;letter-spacing:.06em}
+  footer .foot-copy{font-size:.75rem;color:rgba(255,255,255,.45);letter-spacing:.1em}
+
+  /* ============ RESPONSIVE ============ */
+  @media(max-width:880px){
+    body{font-size:15px}
+    .wrap{padding:0 20px}
+    .hero{padding:56px 0 64px}
+    section{padding:72px 0}
+    .sec-head{margin-bottom:44px}
+    .menu{
+      position:fixed;top:72px;left:0;right:0;
+      background:#fff;flex-direction:column;gap:0;
+      transform:translateY(-150%);transition:transform .3s;
+      border-bottom:1px solid var(--line);padding:8px 0 16px;
+    }
+    .menu.open{transform:translateY(0)}
+    .menu a{padding:14px 28px;width:100%;border-bottom:1px solid var(--line)}
+    .menu .cta{margin:14px 28px;width:calc(100% - 56px);justify-content:center}
+    .hamburger{display:block}
+    .brand small{display:none}
+    .pain-grid,.prog-grid,.voice-grid{grid-template-columns:1fr;gap:18px}
+    .rec-row{grid-template-columns:1fr;gap:8px}
+    .prof{grid-template-columns:1fr;padding:32px 22px;gap:22px;max-width:340px}
+    .prof-photo{max-width:200px;margin:0 auto;aspect-ratio:3/4}
+    .contact-list{gap:8px;max-width:100%}
+    .c-row{grid-template-columns:auto 1fr auto;gap:14px;padding:14px 18px}
+    .c-row .c-label{display:none}
+    .c-row .ic{width:34px;height:34px;font-size:.95rem}
+    .c-row .val{font-size:.92rem}
+
+    /* hero text — iPhone15(393px)で改行が崩れないように */
+    .eyebrow{font-size:.7rem;letter-spacing:.2em;margin-bottom:22px}
+    .hero h1{font-size:2.15rem;line-height:1.38;letter-spacing:.01em;margin-bottom:24px}
+    .hero h1 .em::after{height:5px;bottom:-2px}
+    .hero .lead{font-size:.96rem;line-height:1.9;margin-bottom:32px}
+    .hero-cta{flex-direction:column;gap:12px}
+    .btn{width:100%;justify-content:center;padding:15px 24px;font-size:.95rem}
+    .btn-ghost{padding:13px 24px}
+
+    /* section heads */
+    .sec-label{font-size:.7rem;letter-spacing:.22em;margin-bottom:14px}
+    .sec-head h2{font-size:1.45rem;line-height:1.6;letter-spacing:.02em}
+    .sec-head p{font-size:.92rem;line-height:1.95}
+
+    /* pains */
+    .pain{padding:32px 26px}
+    .pain h3{font-size:1.08rem;line-height:1.7}
+    .pain p{font-size:.9rem}
+
+    /* K-4 MODEL — スマホは pc-only/sp-only で切り替え（k4-mobile を使用） */
+    .k4-msg{padding:26px 22px;margin:0}
+    .k4-msg p{font-size:1rem;line-height:1.85}
+
+    /* programs */
+    .prog-head{padding:22px 24px}
+    .prog-head h3{font-size:1.25rem}
+    .prog-body{padding:24px}
+    .prog-body p.desc{font-size:.92rem}
+    .prog-body li{font-size:.88rem}
+
+    /* records */
+    .rec-row{padding:20px 0}
+    .rec-label{padding-top:0}
+    .rec-label .jp{font-size:.95rem}
+    .rec-names{font-size:.92rem;line-height:1.8}
+
+    /* voices */
+    .voice{padding:36px 28px 30px}
+    .voice .qmark{font-size:3rem;top:14px;left:18px}
+    .voice p{font-size:1.08rem;line-height:1.75}
+
+    /* profile */
+    .prof-info{text-align:center}
+    .prof-info h3{font-size:1.4rem}
+    .prof-info .company{font-size:.9rem;padding-bottom:14px;margin-bottom:14px}
+    .prof-info p.bio{font-size:.9rem;line-height:1.95;text-align:left}
+    .career{justify-content:center}
+    .career span{font-size:.74rem;padding:4px 9px}
+
+    /* contact */
+    .contact{padding:72px 0}
+    .contact-head h2{font-size:1.5rem;line-height:1.6}
+    .contact-head p{font-size:.92rem}
+    .c-card{padding:26px 20px}
+    .c-card .val{font-size:.95rem}
+  }
+
+  /* iPhone15等 393px前後の小さい画面 */
+  @media(max-width:420px){
+    .hero h1{font-size:2rem}
+    .sec-head h2{font-size:1.35rem}
+    .voice p{font-size:1rem}
+    .k4-formula{max-width:260px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand">KAMIYON<span class="dot">.</span>Co<small>営業戦略コンサルティング</small></a>
+    <nav class="menu" id="menu">
+      <a href="#why">課題</a>
+      <a href="#method">K-4 MODEL</a>
+      <a href="#program">研修</a>
+      <a href="#record">実績</a>
+      <a href="#profile">プロフィール</a>
+      <a href="#contact" class="cta">お問い合わせ</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">SALES STRATEGY CONSULTING</div>
+    <h1>売れない理由が、<br><span class="em">言語化される。</span></h1>
+    <p class="lead">
+      営業戦略コンサルタントが設計する、<br class="sp-br">法人向け研修プログラム。
+    </p>
+    <p class="lead">
+      「なぜトップ営業の型は広がらないのか」<br class="sp-br">「なぜ研修をしても現場が変わらないのか」。<br>
+      その理由を、<br class="sp-br">組織の言葉で解き明かします。
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">無料相談を申し込む<span class="arrow">→</span></a>
+      <a href="#method" class="btn btn-ghost">K-4 MODELを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PAINS ===================== -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">CHALLENGES</div>
+      <h2>こんな"営業組織の壁"に、<br class="sp-br">心当たりはありませんか。</h2>
+      <p>
+        属人化、育成停滞、研修の形骸化──<br class="sp-br">多くの企業が抱える3つの課題。<br>
+        原因は「現場の努力不足」ではありません。<br class="sp-br"><strong style="color:var(--navy)">"設計"の欠如</strong>です。
+      </p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain">
+        <div class="check">✓</div>
+        <div class="num">CHALLENGE 01</div>
+        <h3>トップ営業の"型"が、<br>組織に広がらない</h3>
+        <p>属人化したノウハウは、本人以外には再現できない。だから売上は一人の肩にかかり続けます。</p>
+      </div>
+      <div class="pain">
+        <div class="check">✓</div>
+        <div class="num">CHALLENGE 02</div>
+        <h3>管理職が、プレイヤー上がりで<br>育成できない</h3>
+        <p>「自分はできた」では部下は動かない。"育てる側"への転換には、別の言語が必要です。</p>
+      </div>
+      <div class="pain">
+        <div class="check">✓</div>
+        <div class="num">CHALLENGE 03</div>
+        <h3>研修をやっても、<br>現場の行動が変わらない</h3>
+        <p>知識のインストールだけでは行動は変わらない。戦略・マインド・型・スキルを順に設計する必要があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== K-4 MODEL ===================== -->
+<section id="method" class="sec-paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">OUR METHOD</div>
+      <h2>K-4 MODEL®<br>成果を"設計"する、<br class="sp-br">4つの掛け算。</h2>
+      <p>
+        KAMIYON.Coが独自に体系化した<br class="sp-br">営業成果のフレームワーク。<br>
+        営業成果は、根性でも才能でもなく、<br class="sp-br">4つの要素の"掛け算"で決まります。
+      </p>
+    </div>
+
+    <div class="k4-wrap">
+      <!-- PC版：横並びの式 -->
+      <div class="k4-formula pc-only">
+        <div class="k4-box result"><span class="label">RESULT</span><span class="jp">成果</span></div>
+        <div class="k4-op">=</div>
+        <div class="k4-box"><span class="label">STRATEGY</span><span class="jp">戦略</span></div>
+        <div class="k4-op">×</div>
+        <div class="k4-box"><span class="label">MINDSET</span><span class="jp">マインド</span></div>
+        <div class="k4-op">×</div>
+        <div class="k4-box"><span class="label">FORM</span><span class="jp">型</span></div>
+        <div class="k4-op">×</div>
+        <div class="k4-box"><span class="label">SKILL</span><span class="jp">スキル</span></div>
+      </div>
+
+      <!-- スマホ版：成果＝の上に、4要素を2×2グリッドでコンパクトに -->
+      <div class="k4-mobile sp-only">
+        <div class="k4-mini result">
+          <span class="label">RESULT</span>
+          <span class="jp">成果</span>
+        </div>
+        <div class="k4-eq">=</div>
+        <div class="k4-grid">
+          <div class="k4-mini"><span class="label">STRATEGY</span><span class="jp">戦略</span></div>
+          <div class="k4-mini"><span class="label">MINDSET</span><span class="jp">マインド</span></div>
+          <div class="k4-mini"><span class="label">FORM</span><span class="jp">型</span></div>
+          <div class="k4-mini"><span class="label">SKILL</span><span class="jp">スキル</span></div>
+        </div>
+      </div>
+
+      <div class="k4-msg">
+        <p>掛け算だから、<br class="sp-br"><strong>ひとつでも欠けるとゼロ</strong>になる。<br>だから、成果は"設計"できる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROGRAMS ===================== -->
+<section id="program">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">TRAINING PROGRAMS</div>
+      <h2>3つの研修プログラム</h2>
+      <p>組織の状態や課題に応じて、最適な研修設計をご提案します。</p>
+    </div>
+
+    <div class="prog-grid">
+      <div class="prog">
+        <div class="prog-head">
+          <div class="tag">FOR SALES TEAMS</div>
+          <h3>営業研修</h3>
+          <div class="sub">全6回シリーズ</div>
+        </div>
+        <div class="prog-body">
+          <p class="desc">K-4 MODEL®に基づく体系研修。<br class="sp-br">戦略・マインド・型・スキルを順に実装し、営業組織全体の成果を底上げします。</p>
+        </div>
+      </div>
+
+      <div class="prog">
+        <div class="prog-head">
+          <div class="tag">FOR MANAGERS</div>
+          <h3>管理職研修</h3>
+          <div class="sub">全6回シリーズ</div>
+        </div>
+        <div class="prog-body">
+          <p class="desc">プレイヤーから管理職への思考転換を支援。<br class="sp-br">部下の主体性を引き出すマネジメントを、実務に落とし込みます。</p>
+        </div>
+      </div>
+
+      <div class="prog">
+        <div class="prog-head">
+          <div class="tag">SPOT SESSION</div>
+          <h3>スポット研修</h3>
+          <div class="sub">1日完結・単発開催</div>
+        </div>
+        <div class="prog-body">
+          <p class="desc">課題に応じて、1日で完結する研修・ワークショップを設計。<br class="sp-br">チームのキックオフや経営合宿にも対応します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RECORDS ===================== -->
+<section id="record" class="sec-navy">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">TRACK RECORD</div>
+      <h2>実績</h2>
+      <p>業界・規模を問わず、営業組織の変革に伴走してきました。</p>
+    </div>
+    <div class="rec-list">
+      <div class="rec-row">
+        <div class="rec-label">01<span class="jp">セミナー登壇</span></div>
+        <div class="rec-names">ソニー生命株式会社／JAIFA（生命保険ファイナンシャルアドバイザー協会）他</div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-label">02<span class="jp">社内研修</span></div>
+        <div class="rec-names">株式会社バーチュー／株式会社Master Plan／HOPE法律事務所 他</div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-label">03<span class="jp">営業戦略コンサル</span></div>
+        <div class="rec-names">花のあるくらし研究所 他</div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-label">04<span class="jp">個人コンサル</span></div>
+        <div class="rec-names">生命保険営業マン 他</div>
+      </div>
+      <div class="rec-note">※敬称略・順不同</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VOICES ===================== -->
+<section class="sec-paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">VOICES</div>
+      <h2>受講者の声</h2>
+      <p>研修後、現場で起きた"変化"の言葉。</p>
+    </div>
+    <div class="voice-grid">
+      <div class="voice">
+        <div class="qmark">"</div>
+        <p>リーダーの発言が、変わった。</p>
+        <div class="from">― 受講企業 管理職クラス</div>
+      </div>
+      <div class="voice">
+        <div class="qmark">"</div>
+        <p>翌日から、行動が変わった。</p>
+        <div class="from">― 受講企業 営業メンバー</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROFILE ===================== -->
+<section id="profile">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">PROFILE</div>
+      <h2>コンサルタント紹介</h2>
+    </div>
+    <div class="prof">
+      <div class="prof-photo">
+        <span class="fallback">K.H</span>
+        <img src="hattori.jpg" alt="服部 一志" onerror="this.style.display='none';">
+      </div>
+      <div class="prof-info">
+        <div class="role">REPRESENTATIVE</div>
+        <h3>服部 一志</h3>
+        <div class="kana">はっとり かずし</div>
+        <div class="company">KAMIYON.Co 代表／<br class="sp-br">営業戦略コンサルタント</div>
+        <p class="bio">
+          大手外資系製薬会社にてMR（医薬品営業）として<br class="sp-br">キャリアをスタート。
+          全国トップ営業を経験した後、<br class="sp-br">本社研修部門で人材育成プログラムの設計に携わり、
+          営業所長として組織マネジメントを実践。<br class="sp-br">その全てを統合し、独立。
+        </p>
+        <div class="career">
+          <span>MR（医薬品営業）</span>
+          <span class="arr">→</span>
+          <span>全国トップ営業</span>
+          <span class="arr">→</span>
+          <span>本社研修部門</span>
+          <span class="arr">→</span>
+          <span>営業所長</span>
+          <span class="arr">→</span>
+          <span>独立</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AI ERA ===================== -->
+<section id="ai" class="sec-paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-label">FOR THE AI ERA</div>
+      <h2>AIの時代に、<br class="sp-br">営業がなすべきこと。</h2>
+    </div>
+    <div class="ai-body">
+      <p>
+        調べる、説明する、価格を比べる──<br class="sp-br">それだけなら、<br class="sp-br">これからはAIで十分かもしれません。<br>
+        だからこそ、<br class="sp-br">人にしかできない営業の役割を、<br class="sp-br">いま問い直す必要があります。
+      </p>
+      <p>
+        相手の言葉にならない本音を引き出し、<br class="sp-br">思いを汲み、信頼を築く。<br>
+        AIには代えられない<strong>"人の仕事"</strong>を<br class="sp-br">どう磨くか。<br>
+        KAMIYON.Coは、これからの営業を<br class="sp-br">一緒に考え、育てます。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-head">
+      <div class="sec-label">CONTACT</div>
+      <h2>まずは、<br class="sp-br">お気軽にご相談ください。</h2>
+      <p>
+        「うちの組織にも当てはまるかも」と感じたら、<br class="sp-br">その違和感が出発点です。<br>
+        ヒアリングから、<br class="sp-br">最適な研修設計をご提案します。
+      </p>
+    </div>
+
+    <div class="contact-list">
+      <a class="c-row" id="cardEmail" href="#">
+        <span class="ic">✉</span>
+        <span class="c-label">EMAIL</span>
+        <span class="val" id="valEmail"></span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="c-row" id="cardTel" href="#">
+        <span class="ic">☎</span>
+        <span class="c-label">TEL</span>
+        <span class="val" id="valTel"></span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="c-row" id="cardFb" href="#" target="_blank" rel="noopener">
+        <span class="ic">f</span>
+        <span class="c-label">FACEBOOK</span>
+        <span class="val">服部 一志</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="contact-cta">
+      <a href="#" id="ctaContact" class="btn btn-primary">メールで問い合わせる<span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">KAMIYON<span class="dot">.</span>Co</div>
+    <div class="foot-tag">営業を育てる。組織にも、個人にも。<br>静岡発・営業戦略コンサルティング。</div>
+    <div class="foot-copy">© 2026 KAMIYON.Co  All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // 上部のKAMIYON_CONFIGをHTMLに反映
+  (function(){
+    var c = window.KAMIYON_CONFIG || {};
+    if(c.email){
+      document.getElementById('valEmail').textContent = c.email;
+      document.getElementById('cardEmail').href = "mailto:" + c.email;
+    }
+    if(c.tel){
+      document.getElementById('valTel').textContent = c.tel;
+      document.getElementById('cardTel').href = "tel:" + (c.tel_link || c.tel);
+    }
+    if(c.facebook_url){
+      document.getElementById('cardFb').href = c.facebook_url;
+    }
+    if(c.contact_url){
+      document.getElementById('ctaContact').href = c.contact_url;
+    }
+  })();
+
+  // ハンバーガーメニュー
+  var ham = document.getElementById('hamburger');
+  var menu = document.getElementById('menu');
+  ham.addEventListener('click', function(){
+    ham.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      ham.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
