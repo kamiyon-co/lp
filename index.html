@@ -117,8 +117,18 @@
     border-radius:50%;z-index:0;
   }
   .hero .wrap{position:relative;z-index:1}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-  .hero-art{display:flex;justify-content:center;align-items:center}
+  /* PC: 左にタイトル＋リード／CTA縦並び、右にイラスト（全体に渡って） */
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    grid-template-areas:
+      "title art"
+      "lead  art";
+    column-gap:48px;row-gap:0;align-items:center;
+  }
+  .hero-title{grid-area:title}
+  .hero-leadcta{grid-area:lead}
+  .hero-art{grid-area:art;display:flex;justify-content:center;align-items:center}
   .hero-art svg{width:100%;max-width:420px;height:auto}
   .eyebrow{
     display:inline-block;
@@ -458,10 +468,16 @@
     body{font-size:15px}
     .wrap{padding:0 20px}
     .hero{padding:56px 0 64px}
-    .hero-grid{grid-template-columns:1fr;gap:24px}
-    .hero-text{order:1}
-    .hero-art{order:2;justify-content:center}
-    .hero-art svg{max-width:280px}
+    /* スマホ：上段にタイトル＋イラスト横並び、下段にリード＋CTA全幅 */
+    .hero-grid{
+      grid-template-columns:1.5fr 1fr;
+      grid-template-areas:
+        "title art"
+        "lead  lead";
+      column-gap:12px;row-gap:20px;
+      align-items:center;
+    }
+    .hero-art svg{max-width:150px}
     section{padding:72px 0}
     .sec-head{margin-bottom:44px}
     .menu{
@@ -486,9 +502,9 @@
     .c-row .val{font-size:.92rem}
 
     /* hero text — iPhone15(393px)で改行が崩れないように */
-    .eyebrow{font-size:.7rem;letter-spacing:.2em;margin-bottom:22px}
-    .hero h1{font-size:2.15rem;line-height:1.38;letter-spacing:.01em;margin-bottom:24px}
-    .hero h1 .em::after{height:5px;bottom:-2px}
+    .eyebrow{font-size:.65rem;letter-spacing:.18em;margin-bottom:16px;padding-left:10px}
+    .hero h1{font-size:1.75rem;line-height:1.38;letter-spacing:0;margin-bottom:0}
+    .hero h1 .em::after{height:4px;bottom:-2px}
     .hero .lead{font-size:.96rem;line-height:1.9;margin-bottom:32px}
     .hero-cta{flex-direction:column;gap:12px}
     .btn{width:100%;justify-content:center;padding:15px 24px;font-size:.95rem}
@@ -544,7 +560,9 @@
 
   /* iPhone15等 393px前後の小さい画面 */
   @media(max-width:420px){
-    .hero h1{font-size:2rem}
+    .hero h1{font-size:1.6rem}
+    .hero-grid{grid-template-columns:1.55fr 1fr;column-gap:10px}
+    .hero-art svg{max-width:135px}
     .sec-head h2{font-size:1.35rem}
     .voice p{font-size:1rem}
     .k4-formula{max-width:260px}
@@ -573,9 +591,11 @@
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div class="hero-text">
+    <div class="hero-title">
       <div class="eyebrow">SALES STRATEGY CONSULTING</div>
       <h1>売れない理由が、<br><span class="em">言語化される。</span></h1>
+    </div>
+    <div class="hero-leadcta">
       <p class="lead">
         営業戦略コンサルタントが設計する、<br class="sp-br">法人向け研修プログラム。
       </p>
@@ -626,7 +646,7 @@
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-label">CHALLENGES</div>
-      <h2>こんな"営業組織の壁"に、<br class="sp-br">心当たりはありませんか。</h2>
+      <h2>こんな"営業組織の壁"に、<br>心当たりはありませんか。</h2>
       <p>
         属人化、育成停滞、研修の形骸化──<br class="sp-br">多くの企業が抱える3つの課題。<br>
         原因は「現場の努力不足」ではありません。<br class="sp-br"><strong style="color:var(--navy)">"設計"の欠如</strong>です。
