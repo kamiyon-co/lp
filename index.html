@@ -117,6 +117,9 @@
     border-radius:50%;z-index:0;
   }
   .hero .wrap{position:relative;z-index:1}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero-art{display:flex;justify-content:center;align-items:center}
+  .hero-art svg{width:100%;max-width:420px;height:auto}
   .eyebrow{
     display:inline-block;
     font-weight:700;font-size:.78rem;color:var(--orange);
@@ -455,6 +458,10 @@
     body{font-size:15px}
     .wrap{padding:0 20px}
     .hero{padding:56px 0 64px}
+    .hero-grid{grid-template-columns:1fr;gap:24px}
+    .hero-text{order:1}
+    .hero-art{order:2;justify-content:center}
+    .hero-art svg{max-width:280px}
     section{padding:72px 0}
     .sec-head{margin-bottom:44px}
     .menu{
@@ -565,19 +572,51 @@
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">SALES STRATEGY CONSULTING</div>
-    <h1>売れない理由が、<br><span class="em">言語化される。</span></h1>
-    <p class="lead">
-      営業戦略コンサルタントが設計する、<br class="sp-br">法人向け研修プログラム。
-    </p>
-    <p class="lead">
-      「なぜトップ営業の型は広がらないのか」<br class="sp-br">「なぜ研修をしても現場が変わらないのか」。<br>
-      その理由を、<br class="sp-br">組織の言葉で解き明かします。
-    </p>
-    <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">無料相談を申し込む<span class="arrow">→</span></a>
-      <a href="#method" class="btn btn-ghost">K-4 MODELを見る</a>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">SALES STRATEGY CONSULTING</div>
+      <h1>売れない理由が、<br><span class="em">言語化される。</span></h1>
+      <p class="lead">
+        営業戦略コンサルタントが設計する、<br class="sp-br">法人向け研修プログラム。
+      </p>
+      <p class="lead">
+        「なぜトップ営業の型は広がらないのか」<br class="sp-br">「なぜ研修をしても現場が変わらないのか」。<br>
+        その理由を、<br class="sp-br">組織の言葉で解き明かします。
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">無料相談を申し込む<span class="arrow">→</span></a>
+        <a href="#method" class="btn btn-ghost">K-4 MODELを見る</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
+        <!-- 地面（影） -->
+        <ellipse cx="200" cy="380" rx="140" ry="16" fill="#E2E6EE"/>
+        <!-- 茎（メインの曲線） -->
+        <path d="M200,380 C190,320 175,260 200,200 C225,140 215,90 230,50"
+              stroke="#13284A" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- 葉1（左下・ネイビー） -->
+        <ellipse cx="168" cy="280" rx="30" ry="16" fill="#13284A"
+                 transform="rotate(-32 168 280)"/>
+        <!-- 葉2（右中・オレンジ） -->
+        <path d="M225,200 Q260,180 280,200 Q260,220 225,200 Z" fill="#E87B2E"/>
+        <!-- 葉3（左上・小さめネイビー） -->
+        <ellipse cx="195" cy="130" rx="22" ry="12" fill="#13284A"
+                 transform="rotate(28 195 130)"/>
+        <!-- 花/つぼみ（てっぺん・オレンジ円） -->
+        <circle cx="230" cy="50" r="26" fill="#E87B2E"/>
+        <circle cx="230" cy="50" r="10" fill="#fff"/>
+        <!-- 上昇するドット軌跡（成長の象徴） -->
+        <circle cx="290" cy="260" r="6" fill="#13284A" opacity=".85"/>
+        <circle cx="310" cy="220" r="4" fill="#13284A" opacity=".55"/>
+        <circle cx="330" cy="180" r="4" fill="#13284A" opacity=".4"/>
+        <circle cx="350" cy="140" r="5" fill="#13284A" opacity=".55"/>
+        <circle cx="370" cy="90" r="9" fill="#13284A"/>
+        <circle cx="370" cy="90" r="3" fill="#E87B2E"/>
+        <!-- 左上にもう一個ドット（バランス） -->
+        <circle cx="80" cy="120" r="6" fill="#E87B2E" opacity=".75"/>
+        <circle cx="60" cy="80" r="4" fill="#E87B2E" opacity=".5"/>
+      </svg>
     </div>
   </div>
 </section>
