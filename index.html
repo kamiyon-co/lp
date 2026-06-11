@@ -194,29 +194,39 @@
   .sec-head p{color:var(--gray);font-size:1rem;line-height:2}
   .sec-navy .sec-head p{color:rgba(255,255,255,.78)}
 
-  /* ============ PAINS ============ */
+  /* ============ WHY KAMIYON ============ */
+  .why-quote{
+    background:#fff;border:1px solid var(--line);
+    padding:46px 40px;text-align:center;
+    max-width:760px;margin:0 auto 54px;
+    box-shadow:0 12px 36px rgba(19,40,74,.06);position:relative;
+  }
+  .why-quote .qmark{
+    font-family:"Inter",sans-serif;font-size:3.2rem;font-weight:800;
+    color:var(--orange);line-height:1;margin-bottom:10px;
+  }
+  .why-quote p{
+    font-size:clamp(1.15rem,2.1vw,1.45rem);
+    color:var(--navy);font-weight:700;line-height:1.85;
+    letter-spacing:.03em;
+  }
   .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .pain{
     background:#fff;border:1px solid var(--line);
-    padding:40px 32px;position:relative;
+    padding:36px 30px;position:relative;
     border-top:3px solid var(--orange);
     transition:transform .25s,box-shadow .25s;
   }
   .pain:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(19,40,74,.10)}
   .pain .num{
-    font-family:"Inter",sans-serif;font-weight:800;font-size:.85rem;
-    color:var(--orange);letter-spacing:.15em;margin-bottom:18px;
+    font-family:"Inter",sans-serif;font-weight:800;font-size:1.1rem;
+    color:var(--orange);letter-spacing:.1em;margin-bottom:14px;
   }
   .pain h3{
-    color:var(--navy);font-size:1.18rem;font-weight:700;
+    color:var(--navy);font-size:1.15rem;font-weight:700;
     line-height:1.65;margin-bottom:14px;
   }
   .pain p{color:var(--gray);font-size:.94rem;line-height:1.9}
-  .check{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:28px;height:28px;background:var(--orange);color:#fff;
-    border-radius:4px;font-weight:900;margin-bottom:18px;
-  }
 
   /* ============ K-4 MODEL ============ */
   .k4-wrap{max-width:980px;margin:0 auto}
@@ -298,38 +308,45 @@
   }
   .k4-msg p strong{color:var(--orange)}
 
-  /* ============ PROGRAMS ============ */
-  .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  .prog{
+  /* ============ K-4 DETAIL ============ */
+  .k4-detail{
+    max-width:760px;margin:0 auto 50px;
+    background:#fff;border:1px solid var(--line);
+    padding:40px 44px;border-radius:4px;
+  }
+  .k4-detail p{
+    color:var(--ink);font-size:1rem;line-height:2.05;
+    letter-spacing:.03em;margin-bottom:18px;
+  }
+  .k4-detail p:last-child{margin-bottom:0}
+  .k4-detail strong{color:var(--orange);font-weight:700}
+
+  /* ============ SERVICE ============ */
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:980px;margin:0 auto}
+  .svc-card{
     background:#fff;border:1px solid var(--line);
     display:flex;flex-direction:column;
-    transition:transform .25s,box-shadow .25s;
+    transition:transform .25s,box-shadow .25s;overflow:hidden;
   }
-  .prog:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(19,40,74,.12)}
-  .prog-head{
-    background:var(--navy);color:#fff;
-    padding:26px 30px;
-  }
-  .prog:nth-child(2) .prog-head{background:var(--navy-2)}
-  .prog:nth-child(3) .prog-head{background:var(--orange)}
-  .prog-head .tag{
+  .svc-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(19,40,74,.12)}
+  .svc-head{padding:30px 32px}
+  .svc-card.svc-corp .svc-head{background:var(--navy);color:#fff}
+  .svc-card.svc-indiv .svc-head{background:var(--orange);color:#fff}
+  .svc-head .tag{
     display:inline-block;font-family:"Inter",sans-serif;font-weight:600;
-    font-size:.7rem;letter-spacing:.22em;
-    color:rgba(255,255,255,.78);margin-bottom:10px;
+    font-size:.72rem;letter-spacing:.22em;
+    color:rgba(255,255,255,.78);margin-bottom:12px;
   }
-  .prog-head h3{font-size:1.4rem;font-weight:900;letter-spacing:.04em}
-  .prog-head .sub{font-size:.88rem;color:rgba(255,255,255,.85);margin-top:6px;letter-spacing:.08em}
-  .prog-body{padding:30px;flex:1;display:flex;flex-direction:column}
-  .prog-body p.desc{color:var(--ink);font-size:.96rem;line-height:1.85;margin-bottom:20px}
-  .prog-body ul{list-style:none;margin-top:auto}
-  .prog-body li{
-    position:relative;padding-left:22px;
-    color:var(--gray);font-size:.92rem;line-height:1.9;
+  .svc-head h3{font-size:1.6rem;font-weight:900;letter-spacing:.06em;margin-bottom:8px}
+  .svc-head .sub{font-size:.92rem;color:rgba(255,255,255,.85);letter-spacing:.04em;line-height:1.7}
+  .svc-body{padding:8px 32px 32px;flex:1;display:flex;flex-direction:column}
+  .svc-item{padding:22px 0;border-bottom:1px solid var(--line)}
+  .svc-item:last-child{border-bottom:none;padding-bottom:0}
+  .svc-item h4{
+    color:var(--navy);font-size:1.08rem;font-weight:700;
+    margin-bottom:8px;letter-spacing:.03em;
   }
-  .prog-body li::before{
-    content:"";position:absolute;left:0;top:14px;
-    width:8px;height:2px;background:var(--orange);
-  }
+  .svc-item p{color:var(--gray);font-size:.92rem;line-height:1.85}
 
   /* ============ RECORDS ============ */
   .rec-list{max-width:880px;margin:0 auto}
@@ -491,7 +508,7 @@
     .menu .cta{margin:14px 28px;width:calc(100% - 56px);justify-content:center}
     .hamburger{display:block}
     .brand small{display:none}
-    .pain-grid,.prog-grid,.voice-grid{grid-template-columns:1fr;gap:18px}
+    .pain-grid,.prog-grid,.svc-grid,.voice-grid{grid-template-columns:1fr;gap:18px}
     .rec-row{grid-template-columns:1fr;gap:8px}
     .prof{grid-template-columns:1fr;padding:32px 22px;gap:22px;max-width:340px}
     .prof-photo{max-width:200px;margin:0 auto;aspect-ratio:3/4}
@@ -524,12 +541,18 @@
     .k4-msg{padding:26px 22px;margin:0}
     .k4-msg p{font-size:1rem;line-height:1.85}
 
-    /* programs */
-    .prog-head{padding:22px 24px}
-    .prog-head h3{font-size:1.25rem}
-    .prog-body{padding:24px}
-    .prog-body p.desc{font-size:.92rem}
-    .prog-body li{font-size:.88rem}
+    /* service cards */
+    .svc-head{padding:24px 26px}
+    .svc-head h3{font-size:1.4rem}
+    .svc-head .sub{font-size:.88rem}
+    .svc-body{padding:8px 26px 26px}
+    .svc-item{padding:18px 0}
+    .svc-item h4{font-size:1rem}
+    .svc-item p{font-size:.88rem}
+
+    /* k4 detail */
+    .k4-detail{padding:28px 24px;margin:0 0 38px}
+    .k4-detail p{font-size:.94rem;line-height:1.95;margin-bottom:16px}
 
     /* records */
     .rec-row{padding:20px 0}
@@ -575,12 +598,12 @@
   <div class="wrap nav">
     <a href="#" class="brand">KAMIYON<span class="dot">.</span>Co<small>営業戦略コンサルティング</small></a>
     <nav class="menu" id="menu">
-      <a href="#why">課題</a>
+      <a href="#why">特徴</a>
       <a href="#method">K-4 MODEL</a>
-      <a href="#program">研修</a>
+      <a href="#program">サービス</a>
       <a href="#record">実績</a>
       <a href="#profile">プロフィール</a>
-      <a href="#contact" class="cta">お問い合わせ</a>
+      <a href="#contact" class="cta">相談する</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="メニュー">
       <span></span><span></span><span></span>
@@ -639,28 +662,42 @@
   </div>
 </section>
 
-<!-- ===================== PAINS ===================== -->
+<!-- ===================== WHY KAMIYON ===================== -->
 <section id="why">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-label">CHALLENGES</div>
-      <h2>こんな"営業組織の壁"に、<br>心当たりはありませんか。</h2>
+      <div class="sec-label">WHY KAMIYON</div>
+      <h2>「いい話だった」で、<br class="sp-br">終わらせない。</h2>
+      <p>
+        研修の価値は、<br class="sp-br">会場を出たあとに決まります。<br>
+        KAMIYON.Coが大切にしているのは、<br class="sp-br">抽象的な営業論より、<br>
+        現場の "次の一手" まで<br class="sp-br">翻訳しきること。
+      </p>
     </div>
+
+    <div class="why-quote">
+      <div class="qmark">"</div>
+      <p>
+        で、明日から何すればいいか──<br>
+        そこまで落とさないと、<br class="sp-br">研修じゃない。
+      </p>
+    </div>
+
     <div class="pain-grid">
       <div class="pain">
-        <div class="check">✓</div>
-        <div class="num">CHALLENGE 01</div>
-        <h3>トップ営業の"型"が、<br>組織に広がらない</h3>
+        <div class="num">01</div>
+        <h3>現場経験に<br class="sp-br">裏打ちされた"型"</h3>
+        <p>製薬会社のMRから全国トップ営業へ。本社研修部門と営業所長としての育成経験を、再現できる"型"に落とし込みます。</p>
       </div>
       <div class="pain">
-        <div class="check">✓</div>
-        <div class="num">CHALLENGE 02</div>
-        <h3>管理職が、プレイヤー上がりで<br>育成できない</h3>
+        <div class="num">02</div>
+        <h3>「できる人」の感覚を、<br class="sp-br">言葉に</h3>
+        <p>トップ営業が無意識にやっていることを言語化し、「誰に・いつ・何を言うか」まで具体化。だから、再現できます。</p>
       </div>
       <div class="pain">
-        <div class="check">✓</div>
-        <div class="num">CHALLENGE 03</div>
-        <h3>研修をやっても、<br>現場の行動が変わらない</h3>
+        <div class="num">03</div>
+        <h3>組織にも、個人にも</h3>
+        <p>企業の営業組織から、ひとりで戦う事業者・歩合営業まで。同じK-4 MODEL®で、立場に合わせて伴走します。</p>
       </div>
     </div>
   </div>
@@ -670,8 +707,25 @@
 <section id="method" class="sec-paper">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-label">OUR METHOD</div>
-      <h2>K-4 MODEL®<br>成果を"設計"する、<br class="sp-br">4つの掛け算。</h2>
+      <div class="sec-label">K-4 MODEL®</div>
+      <h2>成果は、たった4つの<br class="sp-br">掛け算で決まる。</h2>
+      <p>
+        KAMIYON.Coのすべての<br class="sp-br">研修・コンサルティングの土台にある、<br class="sp-br">独自フレームワークです。
+      </p>
+    </div>
+
+    <div class="k4-detail">
+      <p>
+        世の中の営業本・研修・動画は、<br class="sp-br"><strong>トークやクロージングといった「スキル」に偏りがち</strong>です。<br>
+        スキルはもちろん大切。<br class="sp-br">けれど料理でいえば、<br class="sp-br"><strong>最後の調味料にすぎません</strong>。
+      </p>
+      <p>
+        料理人の思いや、<br class="sp-br">どんな食材をどう調理するか──<br class="sp-br">その土台があってこそ、<br class="sp-br">調味料は活きます。<br>
+        営業も同じで、<br class="sp-br">土台を抜きにスキルだけを磨いても、<br class="sp-br">本当の成果にはつながりません。
+      </p>
+      <p>
+        だからKAMIYON.Coは、<br class="sp-br">成果を生む要素を一つずつ見極め、<br class="sp-br">底上げしていきます。
+      </p>
     </div>
 
     <div class="k4-wrap">
@@ -704,51 +758,67 @@
       </div>
 
       <div class="k4-msg">
-        <p>掛け算だから、<br class="sp-br"><strong>ひとつでも欠けるとゼロ</strong>になる。<br>だから、成果は"設計"できる。</p>
+        <p>
+          掛け算だから、<br class="sp-br">どれか一つが「ゼロ」だと<br class="sp-br">成果もゼロ。<br>
+          <strong>足りていない要素を見極め、<br class="sp-br">底上げする</strong>──<br class="sp-br">それがKAMIYON.Coの仕事です。
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== PROGRAMS ===================== -->
+<!-- ===================== SERVICE ===================== -->
 <section id="program">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-label">TRAINING PROGRAMS</div>
-      <h2>3つの研修プログラム</h2>
+      <div class="sec-label">SERVICE</div>
+      <h2>組織にも、個人にも。<br class="sp-br">立場に合わせた育て方。</h2>
     </div>
 
-    <div class="prog-grid">
-      <div class="prog">
-        <div class="prog-head">
-          <div class="tag">FOR SALES TEAMS</div>
-          <h3>営業研修</h3>
-          <div class="sub">全6回シリーズ</div>
+    <div class="svc-grid">
+      <!-- 法人向け -->
+      <div class="svc-card svc-corp">
+        <div class="svc-head">
+          <div class="tag">FOR COMPANIES</div>
+          <h3>法人向け</h3>
+          <p class="sub">営業組織の力を、<br class="sp-br">仕組みで底上げする。</p>
         </div>
-        <div class="prog-body">
-          <p class="desc">K-4 MODEL®に基づく体系研修。<br class="sp-br">戦略・マインド・型・スキルを順に実装し、営業組織全体の成果を底上げします。</p>
+        <div class="svc-body">
+          <div class="svc-item">
+            <h4>営業研修</h4>
+            <p>現場で明日から使えるスキルへ。商談プロセスを分解し、再現できる型に落とし込みます。</p>
+          </div>
+          <div class="svc-item">
+            <h4>営業リーダー研修</h4>
+            <p>「売れる人」を「育てられる人」へ。マネジメントの役割・目標設計・部下育成を体系的に。</p>
+          </div>
+          <div class="svc-item">
+            <h4>営業コンサルティング</h4>
+            <p>戦略の設計から仕組みづくりまで。組織の課題を構造で捉え、継続的に伴走します。</p>
+          </div>
         </div>
       </div>
 
-      <div class="prog">
-        <div class="prog-head">
-          <div class="tag">FOR MANAGERS</div>
-          <h3>管理職研修</h3>
-          <div class="sub">全6回シリーズ</div>
+      <!-- 個人向け -->
+      <div class="svc-card svc-indiv">
+        <div class="svc-head">
+          <div class="tag">FOR INDIVIDUALS</div>
+          <h3>個人向け</h3>
+          <p class="sub">ひとりで戦うあなたの、<br class="sp-br">伴走者に。</p>
         </div>
-        <div class="prog-body">
-          <p class="desc">プレイヤーから管理職への思考転換を支援。<br class="sp-br">部下の主体性を引き出すマネジメントを、実務に落とし込みます。</p>
-        </div>
-      </div>
-
-      <div class="prog">
-        <div class="prog-head">
-          <div class="tag">SPOT SESSION</div>
-          <h3>スポット研修</h3>
-          <div class="sub">1日完結・単発開催</div>
-        </div>
-        <div class="prog-body">
-          <p class="desc">課題に応じて、<br class="sp-br">1日で完結する研修・ワークショップを設計。<br class="sp-br">チームのキックオフや経営合宿にも対応します。</p>
+        <div class="svc-body">
+          <div class="svc-item">
+            <h4>個人コンサルティング</h4>
+            <p>個人事業主・保険・不動産・自動車などの歩合営業・小規模事業者のための、マンツーマンの伴走。</p>
+          </div>
+          <div class="svc-item">
+            <h4>無料診断から始められる</h4>
+            <p>まずは現状の営業を診断。課題を見える化したうえで、体験・継続へと進みます。</p>
+          </div>
+          <div class="svc-item">
+            <h4>売れる"感覚"を、言葉にする</h4>
+            <p>うまくいった商談の「なぜ」を一緒に言語化。再現できる"自分の型"へ落とし込みます。</p>
+          </div>
         </div>
       </div>
     </div>
