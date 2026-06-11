@@ -386,14 +386,19 @@
 
   /* ============ PROFILE ============ */
   .prof{
+    max-width:1000px;margin:0 auto;
+    display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;
+  }
+  .prof-card{
     background:#fff;border:1px solid var(--line);
-    padding:48px;max-width:900px;margin:0 auto;
-    display:grid;grid-template-columns:240px 1fr;gap:44px;align-items:start;
+    padding:40px;border-radius:4px;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
   }
   .prof-photo{
-    width:100%;aspect-ratio:3/4;background:var(--navy);
+    width:160px;aspect-ratio:3/4;background:var(--navy);
     overflow:hidden;position:relative;
     display:flex;align-items:center;justify-content:center;
+    margin-bottom:24px;
   }
   .prof-photo img{
     position:absolute;inset:0;
@@ -401,9 +406,10 @@
   }
   .prof-photo .fallback{
     font-family:"Inter",sans-serif;
-    font-weight:800;font-size:3rem;letter-spacing:.04em;
+    font-weight:800;font-size:2.4rem;letter-spacing:.04em;
     color:#fff;z-index:1;
   }
+  .prof-info{width:100%}
   .prof-info .role{
     font-family:"Inter",sans-serif;font-size:.78rem;font-weight:600;
     color:var(--orange);letter-spacing:.22em;margin-bottom:12px;
@@ -417,8 +423,30 @@
     color:var(--navy);font-weight:700;font-size:1rem;
     padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line);
   }
-  .prof-info p.bio{color:var(--ink);font-size:.96rem;line-height:2;margin-bottom:14px}
+  .prof-info p.bio{color:var(--ink);font-size:.94rem;line-height:2;margin-bottom:14px;text-align:left}
   .prof-info p.bio:last-of-type{margin-bottom:0}
+
+  /* タイムライン */
+  .timeline{list-style:none;padding:0;margin:0;position:relative}
+  .timeline::before{
+    content:"";position:absolute;left:8px;top:14px;bottom:14px;
+    width:2px;background:var(--line);
+  }
+  .timeline li{
+    position:relative;padding:0 0 28px 36px;
+  }
+  .timeline li:last-child{padding-bottom:0}
+  .tl-marker{
+    position:absolute;left:0;top:8px;
+    width:18px;height:18px;border-radius:50%;
+    background:#fff;border:3px solid var(--orange);
+    z-index:1;
+  }
+  .timeline h4{
+    color:var(--navy);font-size:1.1rem;font-weight:800;
+    letter-spacing:.04em;margin-bottom:6px;
+  }
+  .timeline li p{color:var(--gray);font-size:.94rem;line-height:1.85}
   .career{
     display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;
   }
@@ -510,8 +538,9 @@
     .brand small{display:none}
     .pain-grid,.prog-grid,.svc-grid,.voice-grid{grid-template-columns:1fr;gap:18px}
     .rec-row{grid-template-columns:1fr;gap:8px}
-    .prof{grid-template-columns:1fr;padding:32px 22px;gap:22px;max-width:340px}
-    .prof-photo{max-width:200px;margin:0 auto;aspect-ratio:3/4}
+    .prof{grid-template-columns:1fr;gap:22px;max-width:380px}
+    .prof-card{padding:28px 22px}
+    .prof-photo{width:140px;margin-bottom:18px}
     .contact-list{gap:8px;max-width:100%}
     .c-row{grid-template-columns:auto 1fr auto;gap:14px;padding:14px 18px}
     .c-row .c-label{display:none}
@@ -566,12 +595,12 @@
     .voice p{font-size:1.08rem;line-height:1.75}
 
     /* profile */
-    .prof-info{text-align:center}
     .prof-info h3{font-size:1.4rem}
-    .prof-info .company{font-size:.9rem;padding-bottom:14px;margin-bottom:14px}
-    .prof-info p.bio{font-size:.9rem;line-height:1.95;text-align:left}
-    .career{justify-content:center}
-    .career span{font-size:.74rem;padding:4px 9px}
+    .prof-info p.bio{font-size:.9rem;line-height:1.95}
+    .timeline{padding:0 6px}
+    .timeline li{padding:0 0 22px 32px}
+    .timeline h4{font-size:1rem}
+    .timeline li p{font-size:.88rem}
 
     /* contact */
     .contact{padding:72px 0}
@@ -885,36 +914,45 @@
       <h2>コンサルタント紹介</h2>
     </div>
     <div class="prof">
-      <div class="prof-photo">
-        <span class="fallback">K.H</span>
-        <img src="hattori.jpg" alt="服部 一志" onerror="this.style.display='none';">
-      </div>
-      <div class="prof-info">
-        <div class="role">REPRESENTATIVE</div>
-        <h3>服部 一志</h3>
-        <div class="kana">はっとり かずし</div>
-        <div class="company">KAMIYON.Co 代表／<br class="sp-br">営業戦略コンサルタント</div>
-        <p class="bio">
-          大手外資系製薬会社にてMR（医薬品営業）からキャリアをスタート。<br class="sp-br">全国トップ営業を経験。
-        </p>
-        <p class="bio">
-          その後、本社研修部門で人材育成プログラムの設計に携わり、<br class="sp-br">営業所長として組織マネジメントを実践。
-        </p>
-        <p class="bio">
-          そのすべてを統合し、独立。
-        </p>
-        <div class="career">
-          <span>MR（医薬品営業）</span>
-          <span class="arr">→</span>
-          <span>全国トップ営業</span>
-          <span class="arr">→</span>
-          <span>本社研修部門</span>
-          <span class="arr">→</span>
-          <span>営業所長</span>
-          <span class="arr">→</span>
-          <span>独立</span>
+      <div class="prof-card">
+        <div class="prof-photo">
+          <span class="fallback">K.H</span>
+          <img src="hattori.jpg" alt="服部 一志" onerror="this.style.display='none';">
+        </div>
+        <div class="prof-info">
+          <div class="role">KAMIYON.Co 代表 / K-4 MODEL® 開発者</div>
+          <h3>服部 一志</h3>
+          <div class="kana">はっとり かずし</div>
+          <p class="bio">
+            「退職勧奨から全国トップ営業、そして独立へ」。<br>
+            営業の現場で味わった挫折と再起を、<br class="sp-br">再現できる仕組みに変えてきました。<br>
+            静岡を拠点に、企業研修・コンサルティング・<br class="sp-br">個人向けプログラムを、<br class="sp-br">すべて紹介を通じてお届けしています。
+          </p>
         </div>
       </div>
+
+      <ol class="timeline">
+        <li>
+          <div class="tl-marker"></div>
+          <h4>製薬会社 MR</h4>
+          <p>営業の最前線。「売れない」を経験する。</p>
+        </li>
+        <li>
+          <div class="tl-marker"></div>
+          <h4>本社 研修部門</h4>
+          <p>人を育てる側へ。育成の体系を学ぶ。</p>
+        </li>
+        <li>
+          <div class="tl-marker"></div>
+          <h4>営業所長</h4>
+          <p>ライン管理職として、チームの成果に責任を持つ。</p>
+        </li>
+        <li>
+          <div class="tl-marker"></div>
+          <h4>独立・KAMIYON.Co</h4>
+          <p>K-4 MODEL®を軸に、組織と個人の営業を育てる。</p>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
