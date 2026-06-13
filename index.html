@@ -162,10 +162,11 @@
     margin-bottom:28px;
   }
   .hero h1{
-    font-size:clamp(2.2rem,5.4vw,4.2rem);
+    font-size:clamp(2rem,4.4vw,3.5rem);
     line-height:1.32;font-weight:900;color:var(--navy);
-    letter-spacing:.02em;margin-bottom:30px;
+    letter-spacing:0;margin-bottom:30px;
   }
+  .hero h1 .nowrap{white-space:nowrap}
   .hero h1 .em{
     color:var(--orange);
     position:relative;
@@ -580,7 +581,7 @@
 
     /* hero text — iPhone15(393px)で改行が崩れないように */
     .eyebrow{font-size:.65rem;letter-spacing:.18em;margin-bottom:16px;padding-left:10px}
-    .hero h1{font-size:1.75rem;line-height:1.38;letter-spacing:0;margin-bottom:0}
+    .hero h1{font-size:1.55rem;line-height:1.4;letter-spacing:-.01em;margin-bottom:0}
     .hero h1 .em::after{height:4px;bottom:-2px}
     .hero .lead{font-size:.96rem;line-height:1.9;margin-bottom:32px}
     .hero-cta{flex-direction:column;gap:12px}
@@ -643,9 +644,9 @@
 
   /* iPhone15等 393px前後の小さい画面 */
   @media(max-width:420px){
-    .hero h1{font-size:1.6rem}
-    .hero-grid{grid-template-columns:1.55fr 1fr;column-gap:10px}
-    .hero-art svg{max-width:135px}
+    .hero h1{font-size:1.4rem}
+    .hero-grid{grid-template-columns:1.6fr 1fr;column-gap:8px}
+    .hero-art svg{max-width:125px}
     .sec-head h2{font-size:1.35rem}
     .voice p{font-size:1rem}
     .k4-formula{max-width:260px}
@@ -676,7 +677,7 @@
   <div class="wrap hero-grid">
     <div class="hero-title">
       <div class="eyebrow">SALES STRATEGY CONSULTING</div>
-      <h1>営業を、<span class="em">育てる。</span><br>組織にも、個人にも。</h1>
+      <h1><span class="nowrap">営業を、<span class="em">育てる。</span></span><br><span class="nowrap">組織にも、個人にも。</span></h1>
     </div>
     <div class="hero-leadcta">
       <p class="lead">
